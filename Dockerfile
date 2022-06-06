@@ -26,8 +26,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
 
-# Install apt packages:
-RUN sudo apt-get install -y ubuntu-make
+# # Install apt packages:
+# RUN sudo apt-get install -y ubuntu-make 
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
@@ -37,7 +37,7 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
 # Intall python and .env
-RUN sudo apt-get install python3.10-dev python3.10-venv -y
+RUN sudo apt-get install -y python3.10-dev python3.10-venv 
 
 # -----------
 
